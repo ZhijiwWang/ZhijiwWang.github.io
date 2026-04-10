@@ -20,7 +20,7 @@
         Roboto, Helvetica, Arial, sans-serif;
       background: #f5f5f7;
       color: #1d1d1f;
-      line-height: 1.6;
+      line-height: 1.75;
     }
 
     a {
@@ -32,14 +32,14 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(245, 245, 247, 0.8);
+      background: rgba(245, 245, 247, 0.82);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .nav-container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 14px 24px;
       display: flex;
@@ -48,14 +48,14 @@
     }
 
     .logo {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       letter-spacing: -0.02em;
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
+      gap: 24px;
       font-size: 0.95rem;
       color: #424245;
     }
@@ -64,185 +64,270 @@
       color: #000;
     }
 
-    .hero {
-      max-width: 1100px;
+    .page {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 120px 24px 80px;
-      text-align: center;
+      padding: 42px 24px 80px;
     }
 
-    .hero h1 {
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
-      line-height: 1.05;
-      font-weight: 700;
-      letter-spacing: -0.04em;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto;
-      font-size: 1.25rem;
-      color: #6e6e73;
-    }
-
-    .hero-buttons {
-      margin-top: 34px;
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 999px;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: all 0.25s ease;
-    }
-
-    .btn-primary {
-      background: #0071e3;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: #0077ed;
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      background: white;
-      color: #0071e3;
-      border: 1px solid #d2d2d7;
-    }
-
-    .btn-secondary:hover {
-      background: #fafafa;
-      transform: translateY(-1px);
-    }
-
-    .section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      margin-bottom: 24px;
-      text-align: center;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: #6e6e73;
-      max-width: 760px;
-      margin: 0 auto 40px;
-      font-size: 1.05rem;
-    }
-
-    .card-grid {
+    .hero-layout {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 290px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 92px;
+    }
+
+    .profile-card,
+    .news-card,
+    .content-card {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    .profile-card {
+      padding: 18px;
+      margin-bottom: 22px;
+    }
+
+    .profile-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1.1;
+      border-radius: 22px;
+      object-fit: cover;
+      display: block;
+      background: linear-gradient(135deg, #dfe7f5, #f0f2f8);
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .social-links a {
+      font-size: 0.88rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #424245;
+      border: 1px solid #e1e1e6;
+      transition: all 0.2s ease;
+    }
+
+    .social-links a:hover {
+      color: #0071e3;
+      border-color: #c8dcf5;
+      transform: translateY(-1px);
+    }
+
+    .news-card {
+      padding: 22px 18px;
+    }
+
+    .news-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .news-item {
+      padding: 12px 0;
+      border-top: 1px solid #ececf1;
+    }
+
+    .news-item:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .news-date {
+      font-size: 0.84rem;
+      color: #86868b;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .news-text {
+      font-size: 0.95rem;
+      color: #424245;
+      line-height: 1.65;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
       gap: 24px;
     }
 
-    .card {
-      background: white;
-      border-radius: 28px;
-      padding: 32px;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    .content-card {
+      padding: 38px 40px;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    .name-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
     }
 
-    .card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 14px;
+    .name-row h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      font-weight: 700;
+    }
+
+    .name-accent {
+      font-size: 1.7rem;
+      color: #8b5e3c;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #3a3a3c;
+      margin-bottom: 24px;
       letter-spacing: -0.02em;
     }
 
-    .card p {
-      color: #6e6e73;
-      font-size: 1rem;
+    .intro {
+      font-size: 1.12rem;
+      color: #4d4d52;
+      margin-bottom: 28px;
     }
 
-    .full-width-card {
-      background: linear-gradient(135deg, #ffffff, #f9f9fb);
-      border-radius: 32px;
-      padding: 48px 36px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-      margin-top: 24px;
-      text-align: center;
-    }
-
-    .full-width-card h2 {
-      font-size: 2rem;
-      margin-bottom: 16px;
+    .section-heading {
+      font-size: 1.55rem;
+      font-weight: 700;
       letter-spacing: -0.03em;
+      margin-bottom: 16px;
     }
 
-    .full-width-card p {
-      max-width: 780px;
-      margin: 0 auto;
-      color: #6e6e73;
-      font-size: 1.05rem;
+    .section-text {
+      font-size: 1.06rem;
+      color: #4d4d52;
     }
 
-    .contact {
+    .highlight {
+      color: #8f2f2f;
+      font-weight: 600;
+    }
+
+    .research-banner {
+      margin: 28px 0;
+      padding: 22px 24px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fbfbfd, #eef3fb);
+      border: 1px solid #e5e8f0;
+    }
+
+    .research-banner-title {
       text-align: center;
-      padding: 80px 24px 100px;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+      color: #7a2e2e;
     }
 
-    .contact p {
+    .research-track {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .track-box {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #e6e8ef;
+      border-radius: 18px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .track-box h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #1d1d1f;
+    }
+
+    .track-box p {
+      font-size: 0.94rem;
       color: #6e6e73;
-      margin-top: 10px;
-      font-size: 1.05rem;
+      line-height: 1.55;
+    }
+
+    .section-block {
+      margin-top: 28px;
+    }
+
+    .pub-note {
+      margin-top: 18px;
+      color: #4d4d52;
+      font-size: 1.04rem;
     }
 
     .footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 22px 24px 40px;
       text-align: center;
-      color: #86868b;
       font-size: 0.9rem;
-      padding: 24px;
-      border-top: 1px solid rgba(0, 0, 0, 0.06);
-      background: #f5f5f7;
+      color: #86868b;
     }
 
-    @media (max-width: 768px) {
-      .nav-links {
-        gap: 16px;
-        font-size: 0.9rem;
-      }
-
-      .hero {
-        padding: 90px 20px 60px;
-      }
-
-      .hero p {
-        font-size: 1.08rem;
-      }
-
-      .card-grid {
+    @media (max-width: 980px) {
+      .hero-layout {
         grid-template-columns: 1fr;
       }
 
-      .card,
-      .full-width-card {
-        padding: 28px 24px;
+      .sidebar {
+        position: static;
       }
 
-      .section-title {
-        font-size: 1.8rem;
+      .research-track {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding-top: 28px;
+      }
+
+      .content-card {
+        padding: 28px 22px;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .intro,
+      .section-text,
+      .pub-note {
+        font-size: 1rem;
+      }
+
+      .research-track {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        gap: 14px;
+        font-size: 0.88rem;
       }
     }
   </style>
@@ -250,120 +335,135 @@
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">Ping Li</div>
+      <div class="logo">Zhijie Wang</div>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
+        <a href="#news">News</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <section class="hero">
-    <h1>Computational Modeling for Membrane Systems.</h1>
-    <p>
-      Ph.D. candidate in Environmental Engineering with a minor in Computer Science,
-      working at the intersection of membrane transport modeling, scientific machine learning,
-      and PDE-based methods.
-    </p>
-    <div class="hero-buttons">
-      <a href="#research" class="btn btn-primary">Explore Research</a>
-      <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+  <main class="page">
+    <div class="hero-layout">
+      <aside class="sidebar">
+        <div class="profile-card">
+          <img src="your-photo.jpg" alt="Zhijie Wang" class="profile-photo" />
+          <div class="social-links">
+            <a href="#">CV</a>
+            <a href="#">Google Scholar</a>
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="mailto:your_email@example.com">Email</a>
+          </div>
+        </div>
+
+        <div class="news-card" id="news">
+          <div class="news-title">News</div>
+
+          <div class="news-item">
+            <div class="news-date">04/2026</div>
+            <div class="news-text">
+              Exploring PINN- and Fourier-based approaches for membrane transport PDEs.
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">03/2026</div>
+            <div class="news-text">
+              Building a personal research website and preparing materials for internship applications.
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">01/2026</div>
+            <div class="news-text">
+              Continuing research on mass transfer modeling in membrane filtration systems.
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="main">
+        <div class="content-card" id="about">
+          <div class="name-row">
+            <h1>Zhijie Wang</h1>
+            <div class="name-accent">李</div>
+          </div>
+
+          <div class="subtitle">
+            Ph.D. Student in Environmental Engineering @ UW–Madison
+          </div>
+
+          <p class="intro">
+            I am a third-year Ph.D. student with a minor in Computer Science at the University of
+            Wisconsin–Madison. My research focuses on mass transfer modeling in membrane filtration
+            systems, with growing interests in scientific machine learning, operator learning, and
+            data-driven methods for PDE-governed transport processes.
+          </p>
+
+          <div class="section-heading">Research Interests</div>
+          <p class="section-text">
+            I work at the intersection of <strong>environmental engineering</strong>,
+            <strong>transport modeling</strong>, and <strong>scientific machine learning</strong>.
+            I am particularly interested in developing physically grounded models that improve how
+            we understand and predict transport behavior in membrane systems. My current direction
+            explores how <span class="highlight">physics-informed neural networks</span> and
+            <span class="highlight">Fourier neural networks / neural operators</span> can be used
+            to solve and accelerate membrane transport PDEs.
+          </p>
+
+          <div class="research-banner" id="research">
+            <div class="research-banner-title">
+              Scientific Modeling for Membrane Transport Systems
+            </div>
+
+            <div class="research-track">
+              <div class="track-box">
+                <h3>Physical System</h3>
+                <p>Membrane filtration, solute transport, and mass transfer mechanisms.</p>
+              </div>
+
+              <div class="track-box">
+                <h3>Mathematical Model</h3>
+                <p>PDE-based descriptions of transport, coupling, and boundary effects.</p>
+              </div>
+
+              <div class="track-box">
+                <h3>Learning Framework</h3>
+                <p>PINNs, Fourier neural networks, and operator-learning based surrogates.</p>
+              </div>
+
+              <div class="track-box">
+                <h3>Applications</h3>
+                <p>Efficient prediction, scientific understanding, and future engineering design.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-block">
+            <div class="section-heading">About My Work</div>
+            <p class="section-text">
+              My broader expertise includes environmental and analytical chemistry, contaminant
+              transport, and computational modeling. I aim to combine domain knowledge with modern
+              machine learning tools to build interpretable and practically useful models for
+              complex environmental systems.
+            </p>
+
+            <p class="pub-note">
+              I am currently seeking internship opportunities to further develop and implement
+              scientific machine learning methods, especially PINNs and neural operators, in
+              real-world engineering and data-driven modeling problems.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
+  </main>
 
-  <section class="section" id="about">
-    <h2 class="section-title">About</h2>
-    <p class="section-subtitle">
-      I focus on mass transfer modeling in membrane filtration systems and am currently exploring
-      physics-informed neural networks and Fourier neural networks for solving transport PDEs.
-    </p>
-
-    <div class="full-width-card">
-      <h2>Chemistry, modeling, and machine learning — together.</h2>
-      <p>
-        My background combines environmental chemistry, membrane transport, and computational methods.
-        I am interested in building reliable, physics-guided models for complex engineering systems,
-        with applications in water treatment, transport prediction, and scientific computing.
-      </p>
-    </div>
-  </section>
-
-  <section class="section" id="research">
-    <h2 class="section-title">Research Focus</h2>
-    <p class="section-subtitle">
-      A concise overview of the areas I am currently working on and developing further.
-    </p>
-
-    <div class="card-grid">
-      <div class="card">
-        <h3>Membrane Transport Modeling</h3>
-        <p>
-          Developing models to understand mass transfer behavior in membrane filtration systems,
-          with emphasis on transport mechanisms and PDE-based descriptions.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Scientific Machine Learning</h3>
-        <p>
-          Applying machine learning methods to physical systems, especially where domain knowledge
-          can improve robustness, interpretability, and predictive performance.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>PINNs & Fourier Networks</h3>
-        <p>
-          Exploring physics-informed neural networks and Fourier-based neural architectures
-          for solving transport equations and accelerating scientific modeling workflows.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Environmental Applications</h3>
-        <p>
-          Connecting computational tools with environmental engineering problems, especially
-          in water treatment and complex transport processes.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="projects">
-    <h2 class="section-title">Selected Projects</h2>
-    <p class="section-subtitle">
-      These can later be expanded into individual project pages or linked to GitHub repositories.
-    </p>
-
-    <div class="card-grid">
-      <div class="card">
-        <h3>Transport PDE Modeling in Membrane Systems</h3>
-        <p>
-          Building mathematical and computational frameworks to describe solute transport
-          and mass transfer in membrane-based separation processes.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Physics-Informed Learning for Engineering Problems</h3>
-        <p>
-          Investigating how physical constraints can be embedded into neural networks
-          to improve learning efficiency and scientific consistency.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>Email: zwang3338@wisc.edu</p>
-    <p>GitHub: github.com/yourusername</p>
-  </section>
-
-  <footer class="footer">
-    © 2026 Zhijie Wang. Built with GitHub Pages.
+  <footer class="footer" id="contact">
+    Contact: your_email@example.com · GitHub: github.com/yourusername
   </footer>
 </body>
 </html>
