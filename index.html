@@ -6,29 +6,15 @@
   <link rel="icon" type="image/png" href="icon.png">
   <title>Zhijie Wang</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
-        Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: #f5f5f7;
       color: #1d1d1f;
       line-height: 1.75;
     }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
+    a { text-decoration: none; color: inherit; }
     .navbar {
       position: sticky;
       top: 0;
@@ -38,7 +24,6 @@
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
-
     .nav-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -46,46 +31,44 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
     }
-
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-size: 1.05rem;
       font-weight: 600;
       letter-spacing: -0.02em;
     }
-
+    .logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: block;
+    }
     .nav-links {
       display: flex;
       gap: 24px;
       font-size: 0.95rem;
       color: #424245;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
-
-    .nav-links a:hover {
-      color: #000;
-    }
-
+    .nav-links a:hover { color: #000; }
     .page {
       max-width: 1200px;
       margin: 0 auto;
       padding: 42px 24px 80px;
     }
-
     .hero-layout {
       display: grid;
       grid-template-columns: 290px 1fr;
       gap: 48px;
       align-items: start;
     }
-
-    .sidebar {
-      position: sticky;
-      top: 92px;
-    }
-
-    .profile-card,
-    .news-card,
-    .content-card {
+    .sidebar { position: sticky; top: 92px; }
+    .profile-card, .news-card, .content-card {
       background: rgba(255, 255, 255, 0.82);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -93,12 +76,7 @@
       border-radius: 28px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     }
-
-    .profile-card {
-      padding: 18px;
-      margin-bottom: 22px;
-    }
-
+    .profile-card { padding: 18px; margin-bottom: 22px; }
     .profile-photo {
       width: 100%;
       aspect-ratio: 1 / 1.1;
@@ -107,14 +85,12 @@
       display: block;
       background: linear-gradient(135deg, #dfe7f5, #f0f2f8);
     }
-
     .social-links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 16px;
     }
-
     .social-links a {
       font-size: 0.88rem;
       padding: 8px 12px;
@@ -124,57 +100,52 @@
       border: 1px solid #e1e1e6;
       transition: all 0.2s ease;
     }
-
     .social-links a:hover {
       color: #0071e3;
       border-color: #c8dcf5;
       transform: translateY(-1px);
     }
-
     .news-card {
       padding: 22px 18px;
+      max-height: 68vh;
+      overflow-y: auto;
     }
-
     .news-title {
       font-size: 1.2rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 16px;
     }
-
     .news-item {
       padding: 12px 0;
       border-top: 1px solid #ececf1;
     }
-
     .news-item:first-of-type {
       border-top: none;
       padding-top: 0;
     }
-
     .news-date {
       font-size: 0.84rem;
       color: #86868b;
       margin-bottom: 4px;
       font-weight: 600;
     }
-
     .news-text {
       font-size: 0.95rem;
       color: #424245;
       line-height: 1.65;
     }
-
+    .news-text a {
+      color: #0071e3;
+    }
     .main {
       display: flex;
       flex-direction: column;
       gap: 24px;
     }
-
     .content-card {
       padding: 38px 40px;
     }
-
     .name-row {
       display: flex;
       align-items: center;
@@ -182,20 +153,17 @@
       flex-wrap: wrap;
       margin-bottom: 8px;
     }
-
     .name-row h1 {
       font-size: clamp(2.4rem, 5vw, 3.6rem);
       line-height: 1.05;
       letter-spacing: -0.04em;
       font-weight: 700;
     }
-
     .name-accent {
       font-size: 1.7rem;
       color: #8b5e3c;
       font-weight: 700;
     }
-
     .subtitle {
       font-size: 1.35rem;
       font-weight: 600;
@@ -203,30 +171,25 @@
       margin-bottom: 24px;
       letter-spacing: -0.02em;
     }
-
     .intro {
       font-size: 1.12rem;
       color: #4d4d52;
       margin-bottom: 28px;
     }
-
     .section-heading {
       font-size: 1.55rem;
       font-weight: 700;
       letter-spacing: -0.03em;
       margin-bottom: 16px;
     }
-
     .section-text {
       font-size: 1.06rem;
       color: #4d4d52;
     }
-
     .highlight {
       color: #8f2f2f;
       font-weight: 600;
     }
-
     .research-banner {
       margin: 28px 0;
       padding: 22px 24px;
@@ -234,7 +197,6 @@
       background: linear-gradient(135deg, #fbfbfd, #eef3fb);
       border: 1px solid #e5e8f0;
     }
-
     .research-banner-title {
       text-align: center;
       font-size: 1.35rem;
@@ -243,13 +205,11 @@
       margin-bottom: 18px;
       color: #7a2e2e;
     }
-
     .research-track {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
     }
-
     .track-box {
       background: rgba(255, 255, 255, 0.9);
       border: 1px solid #e6e8ef;
@@ -257,29 +217,22 @@
       padding: 16px;
       text-align: center;
     }
-
     .track-box h3 {
       font-size: 1rem;
       margin-bottom: 8px;
       color: #1d1d1f;
     }
-
     .track-box p {
       font-size: 0.94rem;
       color: #6e6e73;
       line-height: 1.55;
     }
-
-    .section-block {
-      margin-top: 28px;
-    }
-
+    .section-block { margin-top: 28px; }
     .pub-note {
       margin-top: 18px;
       color: #4d4d52;
       font-size: 1.04rem;
     }
-
     .footer {
       max-width: 1200px;
       margin: 0 auto;
@@ -288,59 +241,35 @@
       font-size: 0.9rem;
       color: #86868b;
     }
-
     @media (max-width: 980px) {
-      .hero-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        position: static;
-      }
-
-      .research-track {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .hero-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .research-track { grid-template-columns: repeat(2, 1fr); }
+      .news-card { max-height: none; }
     }
-
     @media (max-width: 640px) {
-      .page {
-        padding-top: 28px;
-      }
-
-      .content-card {
-        padding: 28px 22px;
-      }
-
-      .subtitle {
-        font-size: 1.1rem;
-      }
-
-      .intro,
-      .section-text,
-      .pub-note {
-        font-size: 1rem;
-      }
-
-      .research-track {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        gap: 14px;
-        font-size: 0.88rem;
-      }
+      .page { padding-top: 28px; }
+      .content-card { padding: 28px 22px; }
+      .subtitle { font-size: 1.1rem; }
+      .intro, .section-text, .pub-note { font-size: 1rem; }
+      .research-track { grid-template-columns: 1fr; }
+      .nav-links { gap: 14px; font-size: 0.88rem; }
+      .logo span { display: none; }
     }
   </style>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">Zhijie Wang</div>
+      <a class="logo" href="#about">
+        <img src="icon.png" alt="site icon" />
+        <span>Zhijie Wang</span>
+      </a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#education">Education</a>
+        <a href="publications.html">Publications</a>
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
       </div>
@@ -363,120 +292,155 @@
 
         <div class="news-card" id="news">
           <div class="news-title">News</div>
-        
-          <div class="news-item">
-            <div class="news-date">Mar 2026</div>
-            <div class="news-text">
-              Publication: New paper "Understanding and modelling the partitioning and transport of NH3/NH4+ across RO membrane"
-              accepted by Nature Communications [link]
-            </div>
-          </div>
-        
-          <div class="news-item">
-            <div class="news-date">Jun 2024</div>
-            <div class="news-text">
-              Publication: New paper "Short-chain carboxylate continuous production from food waste with in-situ extraction"
-              accepted by Journal of Environmental Chemical Engineering [link]
-            </div>
-          </div>
-        
-          <div class="news-item">
-            <div class="news-date">Jan 2024</div>
-            <div class="news-text">
-              Publication: New paper "Maximizing Hydrolysis and Acidification of OFMSW Post-Transportation"
-              accepted by Waste and Biomass Valorization [link]
-            </div>
-          </div>
-        
-          <div class="news-item">
-            <div class="news-date">Oct 2022</div>
-            <div class="news-text">
-              Publication: New paper "Is electrodialysis an effective way to achieve high-value utilization of liquid digestate?"
-              accepted by Chemical Engineering Journal [link]
-            </div>
-          </div>
-        
-          <div class="news-item">
-            <div class="news-date">Sep 2022</div>
-            <div class="news-text">
-              Publication: New paper "Molecular behavior of dissolved organic matter during electrodialysis"
-              accepted by ACS ES&T Water [link]
-            </div>
-          </div>
-        
-          <div class="news-item">
-            <div class="news-date">Mar 2022</div>
-            <div class="news-text">
-              Publication: New paper "Analysis on domestic and foreign standards about digestate application"
-              accepted by Environmental Sanitation Engineering [link]
-            </div>
-          </div>
-        
-          <div class="news-item">
-            <div class="news-date">Jan 2022</div>
-            <div class="news-text">
-              Publication: New paper "Fate of a biobased polymer via anaerobic digestion"
-              accepted by Bioresource Technology [link]
-            </div>
-          </div>
-        
-          <div class="news-item">
-            <div class="news-date">Aug 2021</div>
-            <div class="news-text">
-              Publication: New paper "Anaerobic digestion of organic waste and recovery of compounds"
-              accepted by Bioresource Technology [link]
-            </div>
-          </div>
-        
-          <div class="news-item">
-            <div class="news-date">Dec 2024</div>
-            <div class="news-text">
-              Patent: "A device for in-situ organic acids recovery from municipal solid waste" granted
-            </div>
-          </div>
-        
+
           <div class="news-item">
             <div class="news-date">Jun 2026</div>
             <div class="news-text">
-              Conference: New oral presentation at IWA LET 2026: Fate transformation of microplastics during membrane filtration
+              New accepted oral presentation at IWA LET 2026: Fate transformation of low-micrometer microplastics during pressure-driven membrane filtration.
             </div>
           </div>
-        
+
           <div class="news-item">
-            <div class="news-date">Mar 2025</div>
+            <div class="news-date">Mar 2026</div>
             <div class="news-text">
-              Conference: New oral presentation at ACS Spring 2025: Transport of NH3/NH4+ across RO membrane
+              New paper “Understanding and modelling the partitioning and transport of NH3/NH4+ across RO membrane” accepted by Nature Communications.
+              <a href="https://doi.org/10.1038/s41467-026-71260-y">[link]</a>
             </div>
           </div>
-        
+
           <div class="news-item">
             <div class="news-date">May 2025</div>
             <div class="news-text">
-              Conference: New oral presentation at AEESP 2025: Recovery of NH3/NH4+ using RO membrane
+              New oral presentation at AEESP 2025: Enhance the recovery of NH3/NH4+ using RO membrane.
             </div>
           </div>
-        
+
           <div class="news-item">
-            <div class="news-date">Oct 2022</div>
+            <div class="news-date">Mar 2025</div>
             <div class="news-text">
-              Awarded Chinese Ministry of Education National Graduate Scholarship
+              New oral presentation at ACS Spring 2025: Understanding the transport of NH3/NH4+ across RO membrane.
             </div>
           </div>
-        
+
           <div class="news-item">
-            <div class="news-date">Jun 2023</div>
+            <div class="news-date">Dec 2024</div>
             <div class="news-text">
-              Received Outstanding Graduate of Shanghai Municipality
+              Patent granted: A device for in-situ organic acids recovery from the organic fraction of municipal solid waste.
             </div>
           </div>
-        
+
+          <div class="news-item">
+            <div class="news-date">Jun 2024</div>
+            <div class="news-text">
+              New paper “Short-chain carboxylate continuous production from food waste with in-situ extraction: Novel design to reduce chemical input for pH control and alleviate membrane fouling” accepted by Journal of Environmental Chemical Engineering.
+              <a href="https://doi.org/10.1016/j.jece.2024.112554">[link]</a>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">Jan 2024</div>
+            <div class="news-text">
+              New paper “Maximizing Hydrolysis and Acidification of OFMSW Post-Transportation: Toward Easily Degradable Dissolved Carbon Production” accepted by Waste and Biomass Valorization.
+              <a href="https://doi.org/10.1007/s12649-023-02398-9">[link]</a>
+            </div>
+          </div>
+
           <div class="news-item">
             <div class="news-date">Aug 2023</div>
             <div class="news-text">
-              Received Dean’s Graduate Fellowship at Vanderbilt University
+              Awarded Dean’s Graduate Fellowship of Vanderbilt University.
             </div>
           </div>
-        
+
+          <div class="news-item">
+            <div class="news-date">Jun 2023</div>
+            <div class="news-text">
+              Awarded as Outstanding Graduate of Shanghai Municipality.
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">May 2023</div>
+            <div class="news-text">
+              Reported by People’s Daily as a Representative of National Scholarship recipient.
+              <a href="https://paper.people.com.cn/rmrb/html/2023-05/04/nw.D110000renmrb_20230504_1-11.htm">[link]</a>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">Oct 2022</div>
+            <div class="news-text">
+              Awarded Chinese Ministry of Education’s National Graduate Scholarship.
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">Oct 2022</div>
+            <div class="news-text">
+              New paper “Desalination, nutrients recovery, or products extraction: Is electrodialysis an effective way to achieve high-value utilization of liquid digestate?” accepted by Chemical Engineering Journal.
+              <a href="https://doi.org/10.1016/j.cej.2022.136996">[link]</a>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">Oct 2022</div>
+            <div class="news-text">
+              New poster presentation at The 11th National Chemical and Environmental Conference: Migrating patterns of inorganic ions, nutrients, and organics in liquid digestate during electrodialysis.
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">Sep 2022</div>
+            <div class="news-text">
+              New paper “Molecular behavior of dissolved organic matter in liquid digestate from biogenic waste during electrodialysis treatment: Reserve, transfer, or foul the membrane?” accepted by ACS ES&amp;T Water.
+              <a href="https://doi.org/10.1021/acsestwater.2c00302">[link]</a>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">Mar 2022</div>
+            <div class="news-text">
+              New paper “Analysis on domestic and foreign standards and policies about the land application of anaerobic digestate” accepted by Environmental Sanitation Engineering.
+              <a href="https://doi.org/10.19841/j.cnki.hjwsgc.2022.01.003">[link]</a>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">Jan 2022</div>
+            <div class="news-text">
+              New paper “Fate of a biobased polymer via high-solid anaerobic co-digestion with food waste and following aerobic treatment” accepted by Bioresource Technology.
+              <a href="https://doi.org/10.1016/j.biortech.2021.126079">[link]</a>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">Oct 2021</div>
+            <div class="news-text">
+              Awarded Chongyue’s Environmental Education Scholarship.
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">Sep 2021</div>
+            <div class="news-text">
+              New oral presentation at The Summarizing Conference of EU Erasmus+ programme funded Master Program: Recovery of value-added and inhibitory compounds from liquid fraction of digestate.
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">Aug 2021</div>
+            <div class="news-text">
+              My first paper “Anaerobic digestion of organic waste: Recovery of value-added and inhibitory compounds from liquid fraction of digestate” accepted by Bioresource Technology.
+              <a href="https://doi.org/10.1016/j.biortech.2021.125196">[link]</a>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <div class="news-date">Jun 2020</div>
+            <div class="news-text">
+              Awarded as Outstanding Graduate of Shandong University.
+            </div>
+          </div>
         </div>
       </aside>
 
@@ -492,32 +456,19 @@
           </div>
 
           <p class="intro">
-            I am a third-year Ph.D. student with a minor in Computer Science at the University of
-            Wisconsin–Madison. My research focuses on mass transfer modeling in membrane 
-            systems, with growing interests in scientific machine learning, operator learning, and
-            data-driven methods for PDE-governed transport processes. I also work on Raman spectrum processing
-            and AI-based microscope image segmentation for microplastic detaction.
-          </p>
-
-          <p class="section-text">
-            Prior to my Ph.D., I obtained my Master’s degree in Environmental Engineering from Tongji University,
-            where I focused on membrane processes, electrodialysis, and resource recovery from waste streams.
-            I also completed an Erasmus+ exchange program at the University of Florence and worked as an intern at
-            NOVAMONT S.p.A., gaining international research and industry experience.
-            I received my Bachelor’s degree in Environmental Engineering from Shandong University, where I developed
-            a strong foundation in environmental systems, materials, and biochemical processes.
+            I am a third-year Ph.D. student in Civil and Environmental Engineering at the University of Wisconsin–Madison, with a minor in Computer Science. My current work combines membrane transport modeling with scientific machine learning, with particular interest in physics-informed neural networks and Fourier neural networks for solving transport PDEs.
           </p>
 
           <div class="section-heading">Research Interests</div>
           <p class="section-text">
-            I work at the intersection of <strong>environmental engineering</strong>,
-            <strong>transport modeling</strong>, and <strong>scientific machine learning</strong>.
-            I am particularly interested in developing physically grounded models that improve how
-            we understand and predict transport behavior in membrane systems. My current direction
-            explores how <span class="highlight">physics-informed neural networks</span> and
-            <span class="highlight">Fourier neural networks / neural operators</span> can be used
-            to solve and accelerate membrane transport PDEs.
+            I work at the intersection of <strong>environmental engineering</strong>, <strong>transport modeling</strong>, and <strong>scientific machine learning</strong>. I am especially interested in developing physically grounded computational tools for membrane systems, from mechanistic PDE formulations to <span class="highlight">physics-informed neural networks</span> and <span class="highlight">Fourier neural networks / neural operators</span> that can accelerate prediction and improve scientific understanding.
           </p>
+
+          <div class="section-block" id="education">
+            <p class="section-text">
+              Before joining UW–Madison, I earned my M.S. in Environmental Engineering from Tongji University, where I worked on membrane and electrodialysis systems for resource recovery from waste streams. I also completed an Erasmus+ exchange semester at the University of Florence and an internship at NOVAMONT in Italy. My undergraduate education in Environmental Engineering at Shandong University built the foundation for my later work in environmental systems, materials, and biochemical processes.
+            </p>
+          </div>
 
           <div class="research-banner" id="research">
             <div class="research-banner-title">
@@ -527,44 +478,35 @@
             <div class="research-track">
               <div class="track-box">
                 <h3>Physical System</h3>
-                <p>Membrane filtration, solute transport, and mass transfer mechanisms.</p>
+                <p>Pressure-driven membranes, transmembrane mass transfer, and contaminant transport.</p>
               </div>
 
               <div class="track-box">
                 <h3>Mathematical Model</h3>
-                <p>PDE-based descriptions of transport, coupling, and boundary effects.</p>
+                <p>PDE-based descriptions of coupled transport, partitioning, and membrane boundary effects.</p>
               </div>
 
               <div class="track-box">
                 <h3>Learning Framework</h3>
-                <p>PINNs, Fourier neural networks, and operator-learning based surrogates.</p>
+                <p>PINNs, Fourier neural networks, and operator-learning based surrogate models.</p>
               </div>
 
               <div class="track-box">
                 <h3>Applications</h3>
-                <p>Efficient prediction, scientific understanding, and future engineering design.</p>
+                <p>Water treatment, membrane process design, and data-driven engineering analysis.</p>
               </div>
             </div>
           </div>
 
           <div class="section-block">
-            <div class="section-heading">About My Work</div>
+            <div class="section-heading">My Previous Research</div>
             <p class="section-text">
-              <p class="section-text">
-                My research experience spans membrane transport modeling, environmental process design,
-                and materials-related environmental applications. At UW–Madison, I focus on modeling mass transfer
-                in pressure-driven membrane systems, including the transport of amphoteric species such as NH3/NH4+,
-                and developing PDE-based frameworks and alternative physics-informed neural network approaches
-                for solving transport problems.
-              
-                During my master’s research at Tongji University, I worked on membrane bioreactor and electrodialysis
-                systems for value-added chemical recovery from organic waste streams. My work involved studying
-                ion transport, membrane fouling mechanisms, and system-level optimization for resource recovery.
-              
-                I have also conducted research on the degradation of bio-based plastics and anaerobic digestion systems,
-                as well as earlier work on biochar-enhanced methanogenesis and PAH degradation during my undergraduate studies.
+              My previous research has centered on membrane-based separations, resource recovery, and environmental process engineering. At UW–Madison, I study nutrient transport across intrinsically charged membranes and develop theoretical and numerical frameworks for amphoteric ion transport, while also exploring alternative PPIN-style approaches for PDE solving. In parallel, I investigate the fate transformation of low-micrometer microplastics during pressure-driven membrane filtration and build AI-assisted workflows that integrate image segmentation with Raman spectrum classification.
             </p>
 
+            <p class="pub-note">
+              During my master’s research at Tongji University, I designed anaerobic membrane bioreactor and electrodialysis systems for producing and recovering organic acids from municipal organic waste, and studied the transport of salts, nutrients, and organics together with membrane fouling behavior. I also worked on the degradation of bio-based plastics during composting and anaerobic digestion. Earlier, as an undergraduate researcher, I studied biochar-mediated enhancement of anaerobic methanogenesis and PAH degradation.
+            </p>
           </div>
         </div>
       </section>
@@ -572,7 +514,7 @@
   </main>
 
   <footer class="footer" id="contact">
-    Contact: zwang3338@wisc.edu | Copyright by Zhijie Wang | Last Updated Apr 2026
+    Copyright: Zhijie Wang | Last Updated: Apr 2026
   </footer>
 </body>
 </html>
