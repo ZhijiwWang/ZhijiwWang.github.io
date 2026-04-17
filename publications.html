@@ -75,20 +75,11 @@
       display:flex; align-items:center; justify-content:center;
       position:relative;
     }
-    .thumb::before {
-      content:"Image Placeholder";
-      font-size:1rem; color:#7c8595; font-weight:700; letter-spacing:.02em;
-      z-index:2;
-    }
-    .thumb::after {
-      content:"";
-      position:absolute; inset:16px;
-      border-radius:12px;
-      border:1px dashed #c8d0dd;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,.2) 100%),
-        repeating-linear-gradient(90deg, #edf1f7 0 18px, #f7f9fc 18px 36px),
-        repeating-linear-gradient(0deg, #eef2f8 0 18px, #f7f9fc 18px 36px);
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .footer {
       max-width:1280px; margin:0 auto; padding:22px 24px 40px;
@@ -112,11 +103,8 @@
       <div class="logo"><img src="icon.png" alt="icon" /><span>Zhijie Wang</span></div>
       <div class="nav-links">
         <a href="index.html">About</a>
-        <a href="index.html#research">Research</a>
-        <a href="index.html#education">Education</a>
         <a class="active" href="publications.html">Publications</a>
         <a href="news.html">News</a>
-        <a href="index.html#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -140,12 +128,12 @@
             <div class="venue">Nature Communications 2026</div>
           </div>
           <div class="title">Understanding and modelling the partitioning and transport of NH3/NH4+ across RO membrane</div>
-          <div class="authors"><strong>Zhijie Wang</strong>, K. Yang, S. Mahajan, et al.</div>
+          <div class="authors"><strong>Zhijie Wang</strong>, Kai Yang, Subhamoy Mahajan, Ying Li, Mohan Qin.</div>
           <div class="links">
             <a href="https://doi.org/10.1038/s41467-026-71260-y" target="_blank">[Paper]</a>
           </div>
         </div>
-        <div class="thumb"></div>
+        <div class="thumb"><img src="paper_pic/NC.png" alt="Paper figure for NH3/NH4+ transport paper" /></div>
       </article>
 
       <article class="pub-item">
@@ -154,12 +142,12 @@
             <div class="venue">Journal of Environmental Chemical Engineering 2024</div>
           </div>
           <div class="title">Short-chain carboxylate continuous production from food waste with in-situ extraction: Novel design to reduce chemical input for pH control and alleviate membrane fouling</div>
-          <div class="authors"><strong>Zhijie Wang</strong>*, Y. Liu*, P. He, et al.</div>
+          <div class="authors"><strong>Zhijie Wang</strong>*, Yaheng Liu* (equal contribution), Pinjing He, Ruiheng Wang, Hua Zhang, Fan Lü.</div>
           <div class="links">
             <a href="https://doi.org/10.1016/j.jece.2024.112554" target="_blank">[Paper]</a>
           </div>
         </div>
-        <div class="thumb"></div>
+        <div class="thumb"><img src="paper_pic/NC.png" alt="VFA recovery" /></div>
       </article>
 
       <article class="pub-item">
@@ -168,12 +156,12 @@
             <div class="venue">Chemical Engineering Journal 2022</div>
           </div>
           <div class="title">Desalination, nutrients recovery, or products extraction: Is electrodialysis an effective way to achieve high-value utilization of liquid digestate?</div>
-          <div class="authors"><strong>Zhijie Wang</strong>, P. He, H. Zhang, et al.</div>
+          <div class="authors"><strong>Zhijie Wang</strong>, Pinjing He, Hua Zhang, Fan Lü.</div>
           <div class="links">
             <a href="https://doi.org/10.1016/j.cej.2022.136996" target="_blank">[Paper]</a>
           </div>
         </div>
-        <div class="thumb"></div>
+        <div class="thumb"><img src="paper_pic/CEJ.jpg" alt="CEJ picture" /></div>
       </article>
     </section>
 
@@ -182,50 +170,50 @@
         <div>
           <div class="meta-row"><div class="venue">ACS ES&amp;T Water 2023</div></div>
           <div class="title">Molecular behavior of dissolved organic matter in liquid digestate from biogenic waste during electrodialysis treatment: Reserve, transfer, or foul the membrane?</div>
-          <div class="authors"><strong>Zhijie Wang</strong>, P. He, Y. Huang, et al.</div>
+          <div class="authors"><strong>Zhijie Wang</strong>, Pinjing He, Yulong Huang, Ning Zhang, Junjie Qiu, Hua Zhang, Fan Lü.</div>
           <div class="links"><a href="https://doi.org/10.1021/acsestwater.2c00302" target="_blank">[Paper]</a></div>
         </div>
-        <div class="thumb"></div>
+        <div class="thumb"><img src="paper_pic/EST_water.jpeg" alt="EST water picture" /></div>
       </article>
 
       <article class="pub-item">
         <div>
           <div class="meta-row"><div class="venue">Waste and Biomass Valorization 2024</div></div>
           <div class="title">Maximizing Hydrolysis and Acidification of OFMSW Post-Transportation: Toward Easily Degradable Dissolved Carbon Production</div>
-          <div class="authors"><strong>Zhijie Wang</strong>, P. He, Y. Liu, et al.</div>
+          <div class="authors"><strong>Zhijie Wang</strong>, Pinjing He, Yaheng Liu, Hua Zhang, Fan Lü.</div>
           <div class="links"><a href="https://doi.org/10.1007/s12649-023-02398-9" target="_blank">[Paper]</a></div>
         </div>
-        <div class="thumb"></div>
+        <div class="thumb"><img src="paper_pic/waste.webp" alt="waste picture" /></div>
       </article>
 
       <article class="pub-item">
         <div>
           <div class="meta-row"><div class="venue">Bioresource Technology 2022</div></div>
           <div class="title">Fate of a biobased polymer via high-solid anaerobic co-digestion with food waste and following aerobic treatment: Insights on changes of polymer physicochemical properties and the role of microbial and fungal communities</div>
-          <div class="authors">W. Peng, <strong>Zhijie Wang</strong>, Y. Shu, et al.</div>
+          <div class="authors">Wei Peng, <strong>Zhijie Wang</strong>, Yinhui Shu, Fan Lü, Hua Zhang, Liming Shao, Pinjing He.</div>
           <div class="links"><a href="https://doi.org/10.1016/j.biortech.2021.126079" target="_blank">[Paper]</a></div>
         </div>
-        <div class="thumb"></div>
+        <div class="thumb"><img src="paper_pic/bioplastic.jpg" alt="bioplastic picture" /></div>
       </article>
 
       <article class="pub-item">
         <div>
           <div class="meta-row"><div class="venue">Bioresource Technology 2021</div></div>
           <div class="title">Anaerobic digestion of organic waste: Recovery of value-added and inhibitory compounds from liquid fraction of digestate</div>
-          <div class="authors">F. Lü, <strong>Zhijie Wang</strong>, H. Zhang, et al.</div>
+          <div class="authors">Fan Lü, <strong>Zhijie Wang</strong>, Hua Zhang, Liming Shao, Pinjing He.</div>
           <div class="links"><a href="https://doi.org/10.1016/j.biortech.2021.125196" target="_blank">[Paper]</a></div>
         </div>
-        <div class="thumb"></div>
+        <div class="thumb"><img src="paper_pic/review1.jpg" alt="BT picture" /></div>
       </article>
 
       <article class="pub-item">
         <div>
           <div class="meta-row"><div class="venue">Environmental Sanitation Engineering 2022</div></div>
           <div class="title">Analysis on domestic and foreign standards and policies about the land application of anaerobic digestate</div>
-          <div class="authors"><strong>Zhijie Wang</strong>, P. He, et al.</div>
+          <div class="authors"><strong>Zhijie Wang</strong>, P. He, et al.Fan Lü</div>
           <div class="links"><a href="https://doi.org/10.19841/j.cnki.hjwsgc.2022.01.003" target="_blank">[Paper]</a></div>
         </div>
-        <div class="thumb"></div>
+        
       </article>
     </section>
   </main>
