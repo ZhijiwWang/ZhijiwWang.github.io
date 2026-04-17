@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="icon.png">
+  <title>Publications | Zhijie Wang</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:#f5f5f7;
+      color:#1d1d1f;
+      line-height:1.65;
+    }
+    a { text-decoration:none; color:inherit; }
+    .navbar {
+      position:sticky; top:0; z-index:1000;
+      background:rgba(245,245,247,.82);
+      backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .nav-container {
+      max-width:1200px; margin:0 auto; padding:14px 24px;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    .logo { display:flex; align-items:center; gap:10px; font-weight:600; letter-spacing:-.02em; }
+    .logo img { width:26px; height:26px; border-radius:8px; object-fit:cover; }
+    .nav-links { display:flex; gap:24px; font-size:.95rem; color:#424245; }
+    .nav-links a:hover, .nav-links a.active { color:#000; }
+    .page { max-width:1280px; margin:0 auto; padding:28px 18px 80px; }
+    .header { margin-bottom:28px; }
+    .eyebrow {
+      display:flex; align-items:flex-end; gap:12px; flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+    .eyebrow h1 {
+      font-size:2.2rem; line-height:1.05; letter-spacing:-.04em; font-weight:750;
+      text-transform:uppercase;
+    }
+    .eyebrow span { color:#6e6e73; font-size:1.05rem; font-weight:600; }
+    .tabs { display:flex; gap:12px; flex-wrap:wrap; }
+    .tab {
+      padding:12px 22px; border-radius:12px; font-weight:650; font-size:1.05rem;
+      border:1px solid #e1e1e6; background:#ececef; color:#334155;
+    }
+    .tab.active { background:#9f2f27; color:#fff; border-color:#9f2f27; }
+    .pub-list { margin-top:22px; }
+    .pub-item {
+      display:grid; grid-template-columns:minmax(0,1.45fr) minmax(300px,.75fr);
+      gap:32px; align-items:center;
+      padding:34px 12px 34px 28px;
+      border-top:2px dashed #dddde3;
+    }
+    .pub-item:first-child { border-top:none; }
+    .meta-row { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px; }
+    .venue, .tag { font-size:1rem; font-weight:700; }
+    .venue { color:#8d96a5; }
+    .tag { color:#9f2f27; }
+    .title { font-size:1.1rem; font-weight:750; letter-spacing:-.02em; margin-bottom:10px; }
+    .authors { color:#8991a3; font-size:1rem; margin-bottom:34px; }
+    .authors strong { color:#7b8494; }
+    .links { display:flex; gap:18px; flex-wrap:wrap; }
+    .links a {
+      color:#4b5563; font-weight:600; font-size:1rem;
+    }
+    .links a:hover { color:#0071e3; }
+    .thumb {
+      width:100%; aspect-ratio:1.52 / 1;
+      border-radius:18px; overflow:hidden;
+      border:1px solid #dedee5;
+      background:linear-gradient(135deg,#fcfcfd,#e9edf5);
+      box-shadow:0 8px 24px rgba(0,0,0,.05);
+      display:flex; align-items:center; justify-content:center;
+      position:relative;
+    }
+    .thumb::before {
+      content:"Image Placeholder";
+      font-size:1rem; color:#7c8595; font-weight:700; letter-spacing:.02em;
+      z-index:2;
+    }
+    .thumb::after {
+      content:"";
+      position:absolute; inset:16px;
+      border-radius:12px;
+      border:1px dashed #c8d0dd;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,.2) 100%),
+        repeating-linear-gradient(90deg, #edf1f7 0 18px, #f7f9fc 18px 36px),
+        repeating-linear-gradient(0deg, #eef2f8 0 18px, #f7f9fc 18px 36px);
+    }
+    .footer {
+      max-width:1280px; margin:0 auto; padding:22px 24px 40px;
+      text-align:center; font-size:.9rem; color:#86868b;
+    }
+    @media (max-width: 980px) {
+      .pub-item { grid-template-columns:1fr; padding:28px 8px 28px 8px; }
+      .thumb { order:-1; }
+    }
+    @media (max-width: 640px) {
+      .page { padding:22px 14px 60px; }
+      .eyebrow h1 { font-size:1.8rem; }
+      .tab { padding:10px 16px; font-size:.98rem; }
+      .authors { margin-bottom:20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><img src="icon.png" alt="icon" /><span>Zhijie Wang</span></div>
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#education">Education</a>
+        <a class="active" href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="header">
+      <div class="eyebrow">
+        <h1>Publication</h1>
+        <span>* denotes equal contribution</span>
+      </div>
+      <div class="tabs">
+        <a class="tab active" href="#selected">Selected Publications</a>
+        <a class="tab" href="#all">All Publications</a>
+      </div>
+    </div>
+
+    <section class="pub-list" id="selected">
+      <article class="pub-item">
+        <div>
+          <div class="meta-row">
+            <div class="venue">Nature Communications 2026</div>
+          </div>
+          <div class="title">Understanding and modelling the partitioning and transport of NH3/NH4+ across RO membrane</div>
+          <div class="authors"><strong>Zhijie Wang</strong>, K. Yang, S. Mahajan, et al.</div>
+          <div class="links">
+            <a href="https://doi.org/10.1038/s41467-026-71260-y" target="_blank">[Paper]</a>
+          </div>
+        </div>
+        <div class="thumb"></div>
+      </article>
+
+      <article class="pub-item">
+        <div>
+          <div class="meta-row">
+            <div class="venue">Journal of Environmental Chemical Engineering 2024</div>
+          </div>
+          <div class="title">Short-chain carboxylate continuous production from food waste with in-situ extraction: Novel design to reduce chemical input for pH control and alleviate membrane fouling</div>
+          <div class="authors"><strong>Zhijie Wang</strong>*, Y. Liu*, P. He, et al.</div>
+          <div class="links">
+            <a href="https://doi.org/10.1016/j.jece.2024.112554" target="_blank">[Paper]</a>
+          </div>
+        </div>
+        <div class="thumb"></div>
+      </article>
+
+      <article class="pub-item">
+        <div>
+          <div class="meta-row">
+            <div class="venue">Chemical Engineering Journal 2022</div>
+          </div>
+          <div class="title">Desalination, nutrients recovery, or products extraction: Is electrodialysis an effective way to achieve high-value utilization of liquid digestate?</div>
+          <div class="authors"><strong>Zhijie Wang</strong>, P. He, H. Zhang, et al.</div>
+          <div class="links">
+            <a href="https://doi.org/10.1016/j.cej.2022.136996" target="_blank">[Paper]</a>
+          </div>
+        </div>
+        <div class="thumb"></div>
+      </article>
+    </section>
+
+    <section class="pub-list" id="all">
+      <article class="pub-item">
+        <div>
+          <div class="meta-row"><div class="venue">ACS ES&amp;T Water 2023</div></div>
+          <div class="title">Molecular behavior of dissolved organic matter in liquid digestate from biogenic waste during electrodialysis treatment: Reserve, transfer, or foul the membrane?</div>
+          <div class="authors"><strong>Zhijie Wang</strong>, P. He, Y. Huang, et al.</div>
+          <div class="links"><a href="https://doi.org/10.1021/acsestwater.2c00302" target="_blank">[Paper]</a></div>
+        </div>
+        <div class="thumb"></div>
+      </article>
+
+      <article class="pub-item">
+        <div>
+          <div class="meta-row"><div class="venue">Waste and Biomass Valorization 2024</div></div>
+          <div class="title">Maximizing Hydrolysis and Acidification of OFMSW Post-Transportation: Toward Easily Degradable Dissolved Carbon Production</div>
+          <div class="authors"><strong>Zhijie Wang</strong>, P. He, Y. Liu, et al.</div>
+          <div class="links"><a href="https://doi.org/10.1007/s12649-023-02398-9" target="_blank">[Paper]</a></div>
+        </div>
+        <div class="thumb"></div>
+      </article>
+
+      <article class="pub-item">
+        <div>
+          <div class="meta-row"><div class="venue">Bioresource Technology 2022</div></div>
+          <div class="title">Fate of a biobased polymer via high-solid anaerobic co-digestion with food waste and following aerobic treatment: Insights on changes of polymer physicochemical properties and the role of microbial and fungal communities</div>
+          <div class="authors">W. Peng, <strong>Zhijie Wang</strong>, Y. Shu, et al.</div>
+          <div class="links"><a href="https://doi.org/10.1016/j.biortech.2021.126079" target="_blank">[Paper]</a></div>
+        </div>
+        <div class="thumb"></div>
+      </article>
+
+      <article class="pub-item">
+        <div>
+          <div class="meta-row"><div class="venue">Bioresource Technology 2021</div></div>
+          <div class="title">Anaerobic digestion of organic waste: Recovery of value-added and inhibitory compounds from liquid fraction of digestate</div>
+          <div class="authors">F. Lü, <strong>Zhijie Wang</strong>, H. Zhang, et al.</div>
+          <div class="links"><a href="https://doi.org/10.1016/j.biortech.2021.125196" target="_blank">[Paper]</a></div>
+        </div>
+        <div class="thumb"></div>
+      </article>
+
+      <article class="pub-item">
+        <div>
+          <div class="meta-row"><div class="venue">Environmental Sanitation Engineering 2022</div></div>
+          <div class="title">Analysis on domestic and foreign standards and policies about the land application of anaerobic digestate</div>
+          <div class="authors"><strong>Zhijie Wang</strong>, P. He, et al.</div>
+          <div class="links"><a href="https://doi.org/10.19841/j.cnki.hjwsgc.2022.01.003" target="_blank">[Paper]</a></div>
+        </div>
+        <div class="thumb"></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Contact: zwang3338@wisc.edu | Copyright by Zhijie Wang | Last Updated Apr 2026
+  </footer>
+</body>
+</html>

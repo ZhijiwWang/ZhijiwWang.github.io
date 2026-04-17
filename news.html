@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="icon.png">
+  <title>News | Zhijie Wang</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:#f5f5f7; color:#1d1d1f; line-height:1.65;
+    }
+    a { text-decoration:none; color:inherit; }
+    .navbar {
+      position:sticky; top:0; z-index:1000;
+      background:rgba(245,245,247,.82);
+      backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .nav-container {
+      max-width:1100px; margin:0 auto; padding:14px 24px;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    .logo { display:flex; align-items:center; gap:10px; font-weight:600; letter-spacing:-.02em; }
+    .logo img { width:26px; height:26px; border-radius:8px; object-fit:cover; }
+    .nav-links { display:flex; gap:24px; font-size:.95rem; color:#424245; }
+    .nav-links a:hover, .nav-links a.active { color:#000; }
+    .page { max-width:980px; margin:0 auto; padding:34px 24px 80px; }
+    .header { margin-bottom:28px; }
+    .header h1 { font-size:2.3rem; letter-spacing:-.04em; margin-bottom:10px; }
+    .header p { color:#6e6e73; font-size:1.05rem; }
+    .news-list { display:flex; flex-direction:column; gap:14px; }
+    .news-item {
+      background:rgba(255,255,255,.84);
+      border:1px solid rgba(255,255,255,.65);
+      border-radius:22px;
+      box-shadow:0 10px 28px rgba(0,0,0,.05);
+      padding:20px 22px;
+      display:grid; grid-template-columns:110px 1fr; gap:18px; align-items:start;
+    }
+    .date {
+      color:#9f2f27; font-weight:750; font-size:.98rem;
+      letter-spacing:.01em;
+      padding-top:2px;
+    }
+    .content { color:#3f3f46; font-size:1rem; }
+    .content a { color:#0071e3; }
+    .content a:hover { text-decoration:underline; }
+    .footer {
+      max-width:1100px; margin:0 auto; padding:22px 24px 40px;
+      text-align:center; font-size:.9rem; color:#86868b;
+    }
+    @media (max-width: 720px) {
+      .news-item { grid-template-columns:1fr; gap:8px; }
+      .page { padding:26px 16px 60px; }
+      .header h1 { font-size:2rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><img src="icon.png" alt="icon" /><span>Zhijie Wang</span></div>
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#education">Education</a>
+        <a href="publications.html">Publications</a>
+        <a class="active" href="news.html">News</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="header">
+      <h1>News</h1>
+      <p>Recent publications, conference presentations, awards, and research milestones.</p>
+    </div>
+
+    <section class="news-list">
+      <article class="news-item"><div class="date">Jun 2026</div><div class="content">Conference: New oral presentation at IWA LET 2026: <em>Fate transformation of low-micrometer microplastics during pressure-driven membrane filtration</em>.</div></article>
+      <article class="news-item"><div class="date">Mar 2026</div><div class="content">Publication: New paper <em>Understanding and modelling the partitioning and transport of NH3/NH4+ across RO membrane</em> accepted by <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-026-71260-y" target="_blank">[link]</a></div></article>
+      <article class="news-item"><div class="date">May 2025</div><div class="content">Conference: New oral presentation at AEESP 2025: <em>Enhance the recovery of NH3/NH4+ using RO membrane</em>.</div></article>
+      <article class="news-item"><div class="date">Mar 2025</div><div class="content">Conference: New oral presentation at ACS Spring 2025: <em>Understanding the transport of NH3/NH4+ across RO membrane</em>.</div></article>
+      <article class="news-item"><div class="date">Dec 2024</div><div class="content">Patent: <em>A device for in-situ organic acids recovery from the organic fraction of municipal solid waste</em> granted.</div></article>
+      <article class="news-item"><div class="date">Jun 2024</div><div class="content">Publication: New paper <em>Short-chain carboxylate continuous production from food waste with in-situ extraction</em> accepted by <em>Journal of Environmental Chemical Engineering</em>. <a href="https://doi.org/10.1016/j.jece.2024.112554" target="_blank">[link]</a></div></article>
+      <article class="news-item"><div class="date">Jan 2024</div><div class="content">Publication: New paper <em>Maximizing Hydrolysis and Acidification of OFMSW Post-Transportation: Toward Easily Degradable Dissolved Carbon Production</em> accepted by <em>Waste and Biomass Valorization</em>. <a href="https://doi.org/10.1007/s12649-023-02398-9" target="_blank">[link]</a></div></article>
+      <article class="news-item"><div class="date">Aug 2023</div><div class="content">Awarded Dean’s Graduate Fellowship of Vanderbilt University.</div></article>
+      <article class="news-item"><div class="date">Jun 2023</div><div class="content">Received Outstanding Graduate of Shanghai Municipality.</div></article>
+      <article class="news-item"><div class="date">May 2023</div><div class="content">Awarded recognition as Representative of National Scholarship recipient reported by <em>People’s Daily</em>.</div></article>
+      <article class="news-item"><div class="date">Oct 2022</div><div class="content">Publication: New paper <em>Desalination, nutrients recovery, or products extraction: Is electrodialysis an effective way to achieve high-value utilization of liquid digestate?</em> accepted by <em>Chemical Engineering Journal</em>. <a href="https://doi.org/10.1016/j.cej.2022.136996" target="_blank">[link]</a></div></article>
+      <article class="news-item"><div class="date">Oct 2022</div><div class="content">Awarded Chinese Ministry of Education’s National Graduate Scholarship.</div></article>
+      <article class="news-item"><div class="date">Oct 2022</div><div class="content">Industry milestone: joined NOVAMONT S.p.A. in Italy for internship at the headquarters.</div></article>
+      <article class="news-item"><div class="date">Sep 2022</div><div class="content">Publication: New paper <em>Molecular behavior of dissolved organic matter in liquid digestate from biogenic waste during electrodialysis treatment: Reserve, transfer, or foul the membrane?</em> accepted by <em>ACS ES&amp;T Water</em>. <a href="https://doi.org/10.1021/acsestwater.2c00302" target="_blank">[link]</a></div></article>
+      <article class="news-item"><div class="date">Jul 2022</div><div class="content">Conference: New poster presentation at The 11th National Chemical and Environmental Conference: <em>Migrating patterns of inorganic ions, nutrients, and organics in liquid digestate during electrodialysis</em>.</div></article>
+      <article class="news-item"><div class="date">Mar 2022</div><div class="content">Publication: New paper <em>Analysis on domestic and foreign standards and policies about the land application of anaerobic digestate</em> accepted by <em>Environmental Sanitation Engineering</em>. <a href="https://doi.org/10.19841/j.cnki.hjwsgc.2022.01.003" target="_blank">[link]</a></div></article>
+      <article class="news-item"><div class="date">Jan 2022</div><div class="content">Publication: New paper <em>Fate of a biobased polymer via high-solid anaerobic co-digestion with food waste and following aerobic treatment</em> accepted by <em>Bioresource Technology</em>. <a href="https://doi.org/10.1016/j.biortech.2021.126079" target="_blank">[link]</a></div></article>
+      <article class="news-item"><div class="date">Oct 2021</div><div class="content">Awarded Chongyue’s Environmental Education Scholarship.</div></article>
+      <article class="news-item"><div class="date">Sep 2021</div><div class="content">Conference: New oral presentation at the Summarizing Conference of EU Erasmus+ Programme: <em>Recovery of value-added and inhibitory compounds from liquid fraction of digestate</em>.</div></article>
+      <article class="news-item"><div class="date">Aug 2021</div><div class="content">Publication: New paper <em>Anaerobic digestion of organic waste: Recovery of value-added and inhibitory compounds from liquid fraction of digestate</em> accepted by <em>Bioresource Technology</em>. <a href="https://doi.org/10.1016/j.biortech.2021.125196" target="_blank">[link]</a></div></article>
+      <article class="news-item"><div class="date">Jun 2020</div><div class="content">Received Outstanding Graduate of Shandong University.</div></article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Contact: zwang3338@wisc.edu | Copyright by Zhijie Wang | Last Updated Apr 2026
+  </footer>
+</body>
+</html>
