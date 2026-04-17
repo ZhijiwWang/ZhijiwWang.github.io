@@ -142,6 +142,15 @@
       display: flex;
       flex-direction: column;
       gap: 24px;
+      position: sticky;
+      top: 92px;
+      max-height: calc(100vh - 92px - 42px);
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+    .main,
+    .news-card {
+      overscroll-behavior: contain;
     }
     .content-card {
       padding: 38px 40px;
@@ -250,6 +259,12 @@
     @media (max-width: 980px) {
       .hero-layout { grid-template-columns: 1fr; }
       .sidebar { position: static; }
+      .main {
+      position: static;
+      max-height: none;
+      overflow-y: visible;
+      padding-right: 0;
+    }
       .research-track { grid-template-columns: repeat(2, 1fr); }
       .news-card { max-height: none; }
     }
